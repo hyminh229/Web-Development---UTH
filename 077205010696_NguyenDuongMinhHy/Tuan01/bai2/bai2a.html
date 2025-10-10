@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Leonhard Euler - Bài 2a</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background: #fff;
+      color: #111;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 850px;               
+      border: 2px solid #b6c6d8; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 0;
+      background: #fff;
+    }
+
+    .card .hero {
+      height: 140px;
+      background-image: url("images/header-euler.png");
+      background-size: cover;
+      background-position: center;
+      filter: saturate(0.9) brightness(1.05);
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    .content {
+      padding: 22px 26px;
+    }
+
+    h1.title {
+      font-family: "Times New Roman", serif;
+      font-size: 34px;
+      margin: 6px 0 12px 0;
+    }
+
+    p.lead {
+      font-size: 14px;
+      line-height: 1.45;
+      color: #333;
+      text-align: justify;
+      margin-bottom: 12px;
+    }
+
+    .formula {
+      font-family: "Palatino Linotype", "Times New Roman", serif;
+      margin: 16px 0;
+      font-style: italic;
+    }
+
+    hr.sep {
+      border: 0;
+      border-top: 1px solid #ddd;
+      margin: 18px 0;
+    }
+
+    .footnote {
+      font-size: 12px;
+      color: #666;
+      padding: 10px 26px 18px 26px;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    @media (max-width: 900px) {
+      .card { width: 95%; }
+      .card .hero { height: 120px; }
+      h1.title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="article" aria-labelledby="euler-title">
+    <div class="hero" aria-hidden="true"></div>
+
+    <div class="content">
+      <h1 id="euler-title" class="title">Leonhard Euler (1707–1783)</h1>
+
+      <p class="lead">
+        The greatest mathematician of the eighteenth century, <strong>Leonhard Euler</strong> was born in Basel, Switzerland.
+        There, he studied under another giant of mathematics, <em>Jean Bernoulli</em>. In 1731 Euler became a professor of physics and mathematics
+        at St. Petersburg Academy of Sciences. Euler was the most prolific mathematician of all time, publishing over 800 different books and papers.
+        His influence was felt in physics and astronomy as well. Euler's work on mathematical analysis, <em>Introduction in analysin infinitorum</em> (1748)
+        remained a standard textbook for well over a century.
+      </p>
+
+
+      <p class="lead">
+        One can hardly do math without copying Euler. Notations still in use today, such as <code>e</code> and <code>π</code>,
+        were introduced in Euler's writings. He is perhaps best known for his research into mathematical analysis. Euler's formula
+      </p>
+
+      <p class="formula">cos(x) + i sin(x) = e<sup>ix</sup></p>
+
+      <p class="lead">
+        demonstrates the relationship between algebra, complex analysis, and trigonometry. From this equation, it's easy to derive the equation
+      </p>
+
+      <p class="formula">e<sup>iπ</sup> + 1 = 0</p>
+
+      <p class="lead">
+        which relates the fundamental constants: 0, 1, <code>π</code>, <code>e</code>, and <code>i</code> in a single beautiful and elegant statement.
+        Leonhard Euler died in 1783, leaving behind a legacy perhaps unmatched, and certainly unsurpassed, in the annals of mathematics.
+      </p>
+    </div>
+
+    <div class="footnote">
+      <em>Math 895: The History of Mathematics</em>
+    </div>
+  </div>
+</body>
+</html>

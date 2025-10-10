@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<style>
+    body {
+        background-color: #A7C7E7;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 500px;
+        margin: 20px auto;
+        background-color: #A7C7E7;
+        padding: 20px;
+        border: 1px solid #555;
+    }
+    h1 {
+        text-align: center;
+        background-color: #33CCFF;
+        border-radius: 10px;
+        border: 2px solid black;
+        width: 300px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+    label {
+        display: inline-block;
+        width: 120px;
+        margin-top: 5px;
+    }
+    input[type="text"], select, textarea {
+        width: 200px;
+    }
+    hr {
+        margin: 15px 0;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Jackson<br>Electronics</h1>
+    <h2>Registration Form</h2>
+    <p>Register your Jackson Electronics product here</p>
+
+    <form>
+        <label>First Name:</label><input type="text">
+        <label>Last Name:</label><input type="text"><br>
+
+        <label>Address #1:</label><input type="text"><br>
+        <label>Address #2:</label><input type="text"><br>
+
+        <label>City:</label><input type="text">
+        <label>State:</label><input type="text" size="5">
+        <label>Zip:</label><input type="text" size="5"><br>
+
+        <label>Country:</label>
+        <select>
+            <option>United States</option>
+        </select><br><hr>
+
+        <label>Product:</label>
+        <select>
+            <option>ScanMaster</option>
+        </select><br>
+        <label>Date Purchased:</label><input type="text"><br>
+        <label>Serial #:</label><input type="text"><br>
+
+        <label>For use:</label>
+        <input type="radio" name="use"> Home
+        <input type="radio" name="use"> Business
+        <input type="radio" name="use"> Government
+        <input type="radio" name="use"> Educational Institution
+        <input type="radio" name="use"> Other<br><br>
+
+        <label>System:</label>
+        <input type="checkbox"> Windows
+        <input type="checkbox"> Macintosh
+        <input type="checkbox"> UNIX
+        <input type="checkbox"> Other<br><br>
+
+        <label>Comments:</label><br>
+        <textarea rows="4" cols="50"></textarea><br>
+
+        <div class="buttons">
+            <input type="submit" value="Click to register">
+            <input type="reset" value="Click to cancel">
+        </div>
+    </form>
+</div>
+</body>
+</html>
