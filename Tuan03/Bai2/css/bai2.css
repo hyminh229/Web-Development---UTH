@@ -1,0 +1,66 @@
+/* FlowerBox 360 – Bài 2 */
+:root{
+  --nav:#173a5b;
+  --nav2:#214d73;
+  --ink:#ffffff;
+  --text:#2b2f33;
+  --muted:#6b7177;
+  --border:#d5d7da;
+  --accent:#2f6ea6;
+  --btn:#eceff2;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color:var(--text);
+  background:#ffffff;
+}
+.container{max-width:1080px;margin:0 auto;padding:0 18px}
+/* Header */
+.site-header{background:#0b2a4b;color:#fff;border-bottom:1px solid rgba(255,255,255,.15)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.brand{display:flex;gap:12px;align-items:center}
+.brand .logo{font-size:30px}
+.brand h1{font-family:Merriweather,serif;margin:0;font-size:34px;font-weight:900;color:#fff}
+.brand .tag{margin:2px 0 0;color:#e2efff;font-style:italic}
+.search{display:flex;gap:6px}
+.search input{padding:8px 10px;border:1px solid #3f5d7a;border-radius:4px;min-width:240px}
+.search button{padding:8px 12px;border:1px solid #3f5d7a;background:#163b5d;color:#fff;border-radius:4px;cursor:pointer}
+/* Nav bar */
+.nav{background:linear-gradient(#224e75,#1b3f62);box-shadow:inset 0 -1px 0 rgba(0,0,0,.2)}
+.nav .container{display:flex;gap:14px;padding:10px 18px}
+.nav-item{color:#fff;text-decoration:none;font-weight:700;padding:8px 14px;border-radius:6px;background:#25557f}
+.nav-item:hover{background:#2a608d}
+
+/* 3-column layout */
+.content{display:grid;grid-template-columns:1.2fr 1fr 0.9fr;gap:24px;padding:22px 18px}
+@media (max-width: 980px){.content{grid-template-columns:1fr;gap:18px}}
+h2{font-family:Merriweather,serif;font-weight:700;color:#5b6770;margin:6px 0 12px}
+.lead{margin:0 0 10px}
+.red-italic{color:#d11f1f;font-style:italic;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+
+/* Form */
+.form{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:90px 1fr 80px 1fr;gap:12px;align-items:center}
+.row.full{grid-template-columns:90px 1fr}
+label{color:#5c6167}
+.input{width:100%;padding:8px 10px;border:1px solid #bfc6cd;border-radius:2px;background:#fff}
+textarea.input{resize:vertical}
+.actions{display:flex;gap:10px;margin-top:4px}
+.btn{background:#eee;border:1px solid #bfc6cd;border-radius:3px;padding:7px 14px;cursor:pointer}
+.btn.outline{background:#fff}
+
+/* Info column */
+.info hr.dotted{border:0;border-top:2px dotted #c9ced4;margin:8px 0 12px}
+
+/* Specials column */
+.specials .card{background:#f6f8fa;border:1px solid #e0e4e8;border-radius:4px;padding:12px}
+.specials img{width:100%;height:auto;border:4px solid #fff;box-shadow:0 1px 0 #dadfe4, 0 2px 8px rgba(0,0,0,.08);margin-bottom:10px}
+.readmore{display:inline-block;margin-top:6px;color:#2b6aa2;text-decoration:none;font-weight:700}
+.readmore::after{content:" \00BB";}
+
+/* Footer */
+
+.footer{background:#0b2a4b;color:#fff;margin-top:20px}
+.footer p{margin:0;padding:12px 18px;text-align:center;font-size:14px}

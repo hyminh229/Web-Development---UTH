@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+
+/* Header */
+header {
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+header span {
+  background-color: #FFD700;
+  color: #000;
+  padding: 3px 6px;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+/* Bố cục chính */
+.main {
+  display: flex;
+}
+
+/* Menu trái */
+nav {
+  width: 200px;
+  background: #F4E4B2;
+  border-right: 2px solid #E5C97F;
+  padding: 15px;
+  box-sizing: border-box;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #6A4A0C;
+  margin: 6px 0;
+  font-size: 15px;
+}
+nav a:hover {
+  background-color: #e8d293;
+  padding-left: 5px;
+}
+
+/* Nội dung chính */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h2 {
+  color: #C18700;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.content p {
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Tooltip và ảnh trong trang mẫu */
+.scrapbook-sample {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.scrapbook-sample img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 5px;
+  width: 160px;
+  font-size: 12px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.tooltip.top-right { top: 10px; right: 10px; }
+.tooltip.bottom-left { bottom: 20px; left: 20px; }
+.tooltip.bottom-right { bottom: 20px; right: 10px; }
+
+/* Khung Basic Materials */
+.materials-box {
+  border: 2px solid #E5C97F;
+  background-color: #FFF8E1;
+  padding: 10px 15px;
+  width: 280px;
+  float: right;
+  margin: 10px 0 10px 20px;
+}
+.materials-box h3 {
+  color: #C18700;
+  margin-top: 0;
+  font-size: 16px;
+}
+.materials-box ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+.materials-box li {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #C18700;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  clear: both;
+}

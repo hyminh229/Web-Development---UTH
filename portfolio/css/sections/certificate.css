@@ -1,0 +1,36 @@
+.certificate-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 20px 0 10px;
+}
+
+.certificate__text {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: .6px;
+  color: #ff4fb3;
+  margin: 0;
+}
+
+.certificate__img {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .12);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .certificate-section {
+    flex-direction: column;
+    gap: 16px
+  }
+
+  .certificate__text {
+    font-size: 28px;
+    text-align: center
+  }
+}

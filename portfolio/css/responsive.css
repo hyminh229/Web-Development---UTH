@@ -1,0 +1,68 @@
+/* Mobile-first tweaks */
+@media (max-width: 980px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .skills {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 18px
+    }
+
+    .hero__wrap {
+        flex-direction: column-reverse
+    }
+
+    .hero__right {
+        width: 220px
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px
+    }
+
+    .menu {
+        position: fixed;
+        inset: 56px 0 auto 0;
+        background: #3f3d99;
+        padding: 14px 16px;
+        gap: 12px;
+        flex-direction: column;
+        transform: translateY(-120%);
+        transition: transform .25s ease
+    }
+
+    .menu.open {
+        transform: translateY(0)
+    }
+
+    .hamburger {
+        display: flex
+    }
+
+    .hobby {
+        grid-template-columns: 1fr
+    }
+
+    .hobby__list {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .projects {
+        grid-template-columns: 1fr
+    }
+}

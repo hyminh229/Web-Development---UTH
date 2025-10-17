@@ -1,0 +1,79 @@
+/* Autumn Travel Company – Bài 3 */
+:root{
+  --brown:#8b4b19;
+  --gold:#b58a1a;
+  --ink:#3a2a17;
+  --muted:#7a7f85;
+  --panel:#f6efe8;
+  --border:#eadfce;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;color:var(--ink);background:#fff}
+
+/* Header */
+.masthead{background:#b26122;color:#fff;border-bottom:3px solid #80400e}
+.brand{padding:10px 18px}
+.brand h1{font-family:"Playfair Display",serif;margin:0;color:#ffefcf;letter-spacing:3px;text-shadow:0 2px 0 rgba(0,0,0,.2)}
+.nav{background:#814915;border-top:1px solid rgba(255,255,255,.2)}
+.nav .container{display:flex;gap:14px;padding:8px 18px}
+.nav a{color:#fff;text-decoration:none;font-weight:700;padding:6px 12px;border-radius:4px}
+.nav a:hover{background:rgba(255,255,255,.12)}
+.container{max-width:980px;margin:0 auto;padding:0 18px}
+.leaf-bar img{width:100%;height:66px;object-fit:cover;display:block}
+
+/* Layout */
+.layout{display:grid;grid-template-columns:1.5fr 0.9fr;gap:28px;margin:28px auto}
+@media (max-width: 900px){.layout{grid-template-columns:1fr}}
+
+/* Signup */
+.signup h2{font-family:"Playfair Display",serif;color:#9c7a1f;letter-spacing:.8px;margin:0 0 10px}
+.signup .sub{max-width:600px;color:#9a7f4b;font-style:italic;background:linear-gradient(90deg, rgba(255,180,0,.08), rgba(255,180,0,0));padding:8px 0}
+.form{display:grid;gap:18px;margin-top:24px;max-width:520px}
+.form label{display:block;color:#7a7f85}
+.form .line{display:block;width:100%;padding:10px 4px;border:0;border-bottom:2px solid #dfdfdf;background:transparent;outline:none}
+.form .line:focus{border-color:#b58a1a}
+.cta{margin-top:8px;background:#8c6b1c;color:#fff;border:0;border-radius:3px;padding:12px 16px;font-weight:800;letter-spacing:.5px;cursor:pointer}
+.cta:hover{filter:brightness(.98)}
+
+/* Sidebar */
+.sidebar{border-left:1px solid #eee;padding-left:12px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:16px}
+.panel h3{font-family:"Playfair Display",serif;color:#6d5630;margin:0 0 10px}
+.links ul{margin:0;padding-left:18px}
+.links li{margin:6px 0}
+.links a{color:#b06a18;text-decoration:none}
+.links a:hover{text-decoration:underline}
+.info-card{display:grid;grid-template-columns:64px 1fr;gap:10px;align-items:start}
+.info-card img{width:64px;height:64px;object-fit:cover;border-radius:6px;border:3px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.1)}
+.info-card p{margin:0;color:#6a6f75}
+
+/* Footer */
+
+.footer {
+  margin-top: 28px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer .leaf-bar.bottom {
+  position: relative;
+}
+
+.footer .leaf-bar.bottom img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+}
+
+.footer .leaf-bar.bottom p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}

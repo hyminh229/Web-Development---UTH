@@ -1,0 +1,8 @@
+/* Float-up avatar */
+.float-up{animation:floatUp 3.5s ease-in-out infinite}
+@keyframes floatUp{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+
+/* Project hover */
+.project{transition:transform .25s ease, box-shadow .25s ease}
+.project:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 16px 32px rgba(2,6,23,.12)}

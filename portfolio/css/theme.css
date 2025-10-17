@@ -1,0 +1,62 @@
+
+body {
+  background: #ffffff;
+  color: #0e1726;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Topbar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #3f3d99;
+  color: #fff;
+}
+
+.topbar .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.brand img {
+  width: 28px;
+  height: 28px;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  opacity: .9;
+}
+
+.menu a:hover {
+  opacity: 1;
+}
+
+.hamburger {
+  display: none;
+  gap: 4px;
+  flex-direction: column;
+  background: transparent;
+  border: 0;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.alt {
+  background: #ffffff;
+}
+

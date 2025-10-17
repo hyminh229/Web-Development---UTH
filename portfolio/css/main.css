@@ -1,0 +1,94 @@
+@import './theme.css';
+@import './sections/header.css';
+@import './sections/about-me.css';
+@import './sections/skills.css';
+@import './sections/projects.css';
+@import './sections/certificate.css';
+@import './sections/contact.css';
+@import './sections/footer.css';
+@import './sections/hobby.css';
+@import './sections/job.css';
+@import './animation.css';
+
+
+
+:root {
+	font-size: var(--p-font-size);
+	line-height: var(--p-line-height);
+	letter-spacing: var(--p-letter-spacing);
+	font-family: "Chakra Petch", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	scroll-behavior: smooth;
+}
+body {
+	background-color: var(--foreground-color);
+	background-size: 7px 7px;
+	background-image: repeating-linear-gradient(45deg,
+			hsla(var(--p-500-code), 0.1) 0,
+			hsla(var(--p-700-code), 0.1) 0.7000000000000001px,
+			var(--foreground-color) 0,
+			var(--foreground-color) 50%);
+}
+a {
+	text-decoration: none;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0
+}
+
+html {
+	scroll-behavior: smooth
+}
+
+img {
+	max-width: 100%;
+	display: block
+}
+
+/* Section */
+section {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+/* Generic grids */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 18px
+}
+
+.grid-2 { 
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	gap: 28px;
+	align-items: center
+}
+
+
+/* Shared small bits */
+ul {
+	margin: 0;
+	padding-left: 18px
+}
+
+figure {
+	margin: 0
+}
+
+
+/* reveal starts hidden; add .visible through JS */
+.reveal {
+	opacity: 0;
+	transform: translateY(12px);
+	transition: all .6s cubic-bezier(.2, .65, .2, 1)
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: none
+}
