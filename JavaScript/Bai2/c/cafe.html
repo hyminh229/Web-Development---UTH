@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Chọn loại cafe</title>
+  <link rel="stylesheet" href="auth.css">
+  <script defer src="cafe.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Chọn loại cafe:</h1>
+      <fieldset style="border-radius:12px">
+        <legend>Danh sách</legend>
+        <label><input type="checkbox" value="Trung Nguyen" checked> Trung Nguyen</label><br>
+        <label><input type="checkbox" value="Me Kong"> Me Kong</label><br>
+        <label><input type="checkbox" value="New Life" checked> New Life</label><br>
+        <label><input type="checkbox" value="Ocean Blue"> Ocean Blue</label><br>
+        <label><input type="checkbox" value="Blue Space"> Blue Space</label><br>
+        <label><input type="checkbox" value="Windows"> Windows</label><br><br>
+        <button id="show">Chọn</button>
+        <button id="clear" class="ghost">Bỏ chọn</button>
+      </fieldset>
+      <p class="note">Bạn chọn cafe: <strong id="result">Trung Nguyen, New Life</strong></p>
+    </div>
+  </div>
+</body>
+</html>

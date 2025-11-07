@@ -1,0 +1,18 @@
+/* dùng chung cho đăng ký/đăng nhập */
+:root { --ink:#333; --primary:#0ea5e9; --muted:#f3f4f6; }
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto,sans-serif}
+body{margin:0;padding:24px;background:#fff;color:var(--ink)}
+.container{max-width:600px;margin:0 auto}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+h1{margin:.2rem 0 1rem;font-weight:700;letter-spacing:.3px}
+.row{display:grid;grid-template-columns:140px 1fr;gap:10px 14px;align-items:center;margin:.5rem 0}
+input[type="text"],input[type="password"],input[type="email"]{
+  width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:10px;outline:none
+}
+input:focus{border-color:var(--primary);box-shadow:0 0 0 3px #0ea5e933}
+.actions{display:flex;gap:10px;margin-top:12px}
+button{padding:10px 14px;border-radius:10px;border:1px solid transparent;background:var(--primary);color:#fff;cursor:pointer}
+button.ghost{background:var(--muted);color:#111;border-color:#e5e7eb}
+small.error{grid-column:2 / -1;color:#b91c1c;margin-top:-6px}
+.note{margin-top:10px;color:#6b7280}
+.success{padding:10px;border:1px solid #16a34a33;background:#16a34a11;color:#166534;border-radius:8px;margin-top:10px}

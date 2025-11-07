@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Phép tính cơ bản</title>
+  <link rel="stylesheet" href="auth.css">
+  <style>
+    .ops{display:flex;gap:8px;flex-wrap:wrap}
+    output{display:block;margin-top:10px;padding:10px;background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px}
+  </style>
+  <script defer src="calc.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>PHÉP TÍNH CƠ BẢN</h1>
+      <div class="row">
+        <label for="a">Nhập số thứ 1 <span style="color:#ef4444">*</span></label>
+        <input id="a" type="text" inputmode="decimal" placeholder="ví dụ: 12.5">
+        <small class="error"></small>
+      </div>
+      <div class="row">
+        <label for="b">Nhập số thứ 2 <span style="color:#ef4444">*</span></label>
+        <input id="b" type="text" inputmode="decimal">
+        <small class="error"></small>
+      </div>
+      <div class="ops">
+        <button data-op="+">Cộng</button>
+        <button data-op="-">Trừ</button>
+        <button data-op="*">Nhân</button>
+        <button data-op="/">Chia</button>
+        <button data-op="%">Chia dư</button>
+      </div>
+      <output id="kq">Kết quả: …</output>
+    </div>
+  </div>
+</body>
+</html>

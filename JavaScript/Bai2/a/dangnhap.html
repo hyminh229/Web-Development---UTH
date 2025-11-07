@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="auth.css">
+  <script type="module">
+    import { initLogin } from './auth.js';
+    window.addEventListener('DOMContentLoaded', initLogin);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>THÔNG TIN ĐĂNG NHẬP</h1>
+      <form id="loginForm" novalidate>
+        <div class="row">
+          <label for="l_username">UserName</label>
+          <input id="l_username" type="text" placeholder="YourName">
+          <small class="error"></small>
+        </div>
+        <div class="row">
+          <label for="l_password">PassWord</label>
+          <input id="l_password" type="password" placeholder="YourPWD">
+          <small class="error"></small>
+        </div>
+        <div class="actions">
+          <button type="submit">Đăng nhập</button>
+          <a class="ghost button" href="dangky.html"><button type="button" class="ghost">Sang đăng ký</button></a>
+        </div>
+      </form>
+      <div id="loginResult" class="note"></div>
+    </div>
+  </div>
+</body>
+</html>

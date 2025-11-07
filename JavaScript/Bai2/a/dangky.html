@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="auth.css">
+  <script type="module">
+    import { initRegister } from './auth.js';
+    window.addEventListener('DOMContentLoaded', initRegister);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>THÔNG TIN ĐĂNG KÝ</h1>
+      <form id="registerForm" novalidate>
+        <div class="row">
+          <label for="r_username">Họ tên / Username</label>
+          <input id="r_username" type="text" placeholder="YourName">
+          <small class="error"></small>
+        </div>
+        <div class="row">
+          <label for="r_password">Mật khẩu</label>
+          <input id="r_password" type="password" placeholder="YourPWD">
+          <small class="error"></small>
+        </div>
+        <div class="row">
+          <label for="r_email">Email</label>
+          <input id="r_email" type="email" placeholder="you@example.com">
+          <small class="error"></small>
+        </div>
+        <div class="actions">
+          <button type="submit">Đăng ký</button>
+          <a class="ghost button" href="dangnhap.html"><button type="button" class="ghost">Sang đăng nhập</button></a>
+        </div>
+      </form>
+      <div id="registerResult" class="note"></div>
+    </div>
+  </div>
+</body>
+</html>

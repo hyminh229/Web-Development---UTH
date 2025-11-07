@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Form định dạng (câu d)</title>
+<style>
+  *{box-sizing:border-box;font-family:Tahoma,Arial,Helvetica,sans-serif}
+  body{background:#fff;margin:32px}
+  .wrapper{
+    width:560px;margin:0 auto;border:1px solid #9aa6b2;border-radius:2px;
+    padding:14px 16px;background:#fff;
+  }
+  .title{text-align:center;font-weight:bold;margin-bottom:10px}
+  .grid{display:grid;grid-template-columns:120px 1fr;gap:8px 10px;align-items:center}
+  input[type="text"],select{
+    width:100%;padding:6px 8px;border:1px solid #9aa6b2;border-radius:2px;
+  }
+  .btns{display:flex;gap:8px;margin-top:6px}
+  button{
+    padding:6px 12px;border:1px solid #9aa6b2;background:#e7e9ec;border-radius:3px;cursor:pointer
+  }
+  button:hover{filter:brightness(.98)}
+  .content{
+    margin-top:12px;border:1px solid #9aa6b2;border-radius:2px;padding:10px;
+    min-height:140px;line-height:1.35
+  }
+  .hint{font-size:13px;color:#475569;margin-top:6px}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title">FORM ĐỊNH DẠNG</div>
+
+    <div class="grid">
+      <label for="fullname">Họ và tên</label>
+      <input id="fullname" type="text" placeholder="">
+      
+      <div>Chọn</div>
+      <div>
+        <label><input type="radio" name="mode" value="bg" checked> Background</label>
+        &nbsp;&nbsp;
+        <label><input type="radio" name="mode" value="font"> Font</label>
+      </div>
+
+      <label for="colorSel">Chọn màu</label>
+      <div>
+        <select id="colorSel">
+          <option value="">Chọn màu ...</option>
+          <option value="#000000">Đen</option>
+          <option value="#ffffff">Trắng</option>
+          <option value="#ff0000">Đỏ</option>
+          <option value="#0070ff">Xanh dương</option>
+          <option value="#16a34a">Xanh lá</option>
+          <option value="#f59e0b">Vàng cam</option>
+          <option value="#a855f7">Tím</option>
+          <option value="#6b7280">Xám</option>
+        </select>
+        <div class="btns">
+          <button id="apply">Đổi màu</button>
+          <button id="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="content" class="content">
+      you can direct link the hyperlink with the file if you know the address but this is limited by the browser. eg: if pdf reader is installed on the client then the pdf will not be downloaded instead it will be shown. A good solution would be to have a seperate page for downloading files. just pass filename in querystring and in the pageload event just output the file in response stream. This way you can use url say dwnld.aspx?filename.ext
+    </div>
+
+    <div class="hint" id="nameHint"></div>
+  </div>
+
+<script>
+  const content = document.getElementById('content');
+  const colorSel = document.getElementById('colorSel');
+  const nameInp = document.getElementById('fullname');
+  const nameHint = document.getElementById('nameHint');
+
+  function luma(hex){
+    const c = hex.replace('#','');
+    const r = parseInt(c.substr(0,2),16),
+          g = parseInt(c.substr(2,2),16),
+          b = parseInt(c.substr(4,2),16);
+    return 0.2126*r + 0.7152*g + 0.0722*b;
+  }
+
+  document.getElementById('apply').addEventListener('click', ()=>{
+    const color = colorSel.value;
+    if(!color) return;
+    const mode = document.querySelector('input[name="mode"]:checked').value;
+
+    if(mode === 'bg'){
+      content.style.backgroundColor = color;
+      // tự động chọn màu chữ tương phản khi đổi nền
+      content.style.color = (luma(color) < 150) ? '#ffffff' : '#111111';
+    }else{
+      content.style.color = color;
+    }
+    // hiển thị họ tên (nếu có)
+    if(nameInp.value.trim()){
+      nameHint.textContent = 'Họ và tên: ' + nameInp.value.trim();
+    }else{
+      nameHint.textContent = '';
+    }
+  });
+
+  document.getElementById('cancel').addEventListener('click', ()=>{
+    colorSel.value = '';
+    content.style.backgroundColor = '';
+    content.style.color = '';
+    nameHint.textContent = '';
+  });
+</script>
+</body>
+</html>

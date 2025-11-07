@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài 1 - Hàm Prompt</title>
+  <link rel="stylesheet" href="bai1.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="actions">
+        <button class="btn" id="reInput">Nhập lại</button>
+      </div>
+
+      <table aria-describedby="ds-sv">
+        <caption id="ds-sv">DANH SÁCH SINH VIÊN</caption>
+        <colgroup>
+          <col style="width:25%"><col style="width:55%"><col style="width:20%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>MSSV</th>
+            <th>Tên</th>
+            <th>Lớp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="mssv">—</td>
+            <td id="hoten">—</td>
+            <td id="lop">—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="note">Tip: Nhấn “Nhập lại” để mở prompt một lần nữa.</p>
+    </div>
+  </div>
+
+  <script src="bai1.js"></script>
+</body>
+</html>
