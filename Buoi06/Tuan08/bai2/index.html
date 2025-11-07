@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Bài 2. Thiết kế form xử lý dữ liệu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Bài 2. Thiết kế form xử lý dữ liệu</h1>
+
+    <form id="productForm">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hình ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="rose.jpg" alt="Hoa hồng" class="product-image" />
+            </td>
+            <td class="price">20000</td>
+            <td>
+              <input type="number" class="quantity" data-price="20000" value="20" min="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="autumn.jpg" alt="Hoa mùa thu" class="product-image" />
+            </td>
+            <td class="price">40000</td>
+            <td>
+              <input type="number" class="quantity" data-price="40000" value="5" min="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="autumnleaf.jpg" alt="Lá mùa thu" class="product-image" />
+            </td>
+            <td class="price">30000</td>
+            <td>
+              <input type="number" class="quantity" data-price="30000" value="0" min="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="leafs.jpg" alt="Lá cây" class="product-image" />
+            </td>
+            <td class="price">50000</td>
+            <td>
+              <input type="number" class="quantity" data-price="50000" value="0" min="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="sky.jpg" alt="Bầu trời" class="product-image" />
+            </td>
+            <td class="price">30000</td>
+            <td>
+              <input type="number" class="quantity" data-price="30000" value="0" min="0" />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="total-label">Tổng thành tiền</td>
+            <td class="total-amount" id="totalAmount">600000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

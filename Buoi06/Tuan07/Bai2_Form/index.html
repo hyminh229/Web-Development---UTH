@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>T-SPEED COMPANY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .header-banner {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: white;
+    }
+    .car-images {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .car-placeholder {
+      width: 120px;
+      height: 80px;
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 12px;
+    }
+    .company-name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+    }
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .section h5 {
+      margin-bottom: 15px;
+      color: #333;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 8px;
+    }
+    .market-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .market-table th {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #0056b3;
+    }
+    .market-table td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      min-height: 40px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .btn {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .btn-primary:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+    .btn-secondary:hover {
+      background-color: #5a6268;
+    }
+    .quotation-content {
+      margin-top: 15px;
+    }
+    .quotation-content ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .quotation-content li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .quotation-content li:before {
+      content: "-";
+      position: absolute;
+      left: 0;
+    }
+    .car-image-display {
+      width: 100%;
+      height: 200px;
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      overflow: hidden;
+    }
+    .car-image-display img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .price-display {
+      font-size: 18px;
+      font-weight: bold;
+      color: #28a745;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-banner">
+    <div class="car-images">
+      <div class="car-placeholder">Car 1</div>
+      <div class="car-placeholder">Car 2</div>
+      <div class="car-placeholder">Car 3</div>
+      <div class="car-placeholder">Car 4</div>
+      <div class="car-placeholder">Car 5</div>
+    </div>
+    <div class="company-name">T-SPEED COMPANY</div>
+  </div>
+
+  <div class="main-content">
+    <!-- Left Section: Market News Board -->
+    <div class="section">
+      <h5>Bảng tin thị trường</h5>
+      <table class="market-table">
+        <thead>
+          <tr>
+            <th colspan="2">Vàng</th>
+          </tr>
+          <tr>
+            <th>Mua vào</th>
+            <th>Bán ra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="vang-mua-vao"></td>
+            <td id="vang-ban-ra"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="market-table">
+        <thead>
+          <tr>
+            <th colspan="2">USD</th>
+          </tr>
+          <tr>
+            <th>Mua vào</th>
+            <th>Bán ra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="usd-mua-vao"></td>
+            <td id="usd-ban-ra"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Middle Section: Update Market Prices -->
+    <div class="section">
+      <h5>Cập nhật giá cả thị trường</h5>
+      <div class="form-group">
+        <label for="mua-vao">Mua vào</label>
+        <input type="text" class="form-control" id="mua-vao" name="mua-vao">
+      </div>
+      <div class="form-group">
+        <label for="ban-ra">Bán ra</label>
+        <input type="text" class="form-control" id="ban-ra" name="ban-ra">
+      </div>
+      <div class="form-group">
+        <label for="loai-xe">Loại xe</label>
+        <select class="form-control" id="loai-xe" name="loai-xe">
+          <option value="images/car1.webp;35000">Toyota</option>
+          <option value="images/car2.jpg;15000">KIA</option>
+          <option value="images/car3.webp;40000">Ford</option>
+          <option value="images/car4.webp;32000">Civic</option>
+          <option value="images/car5.webp;50000">Ferrari</option>
+          <option value="images/car6.jpg;45000">Mercedes</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Cập nhật cho:</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="cap-nhat-cho" value="1" id="vang-radio">
+            Vàng
+          </label>
+          <label>
+            <input type="radio" name="cap-nhat-cho" value="0" id="usd-radio">
+            USD
+          </label>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" id="update-btn">Update</button>
+        <button type="button" class="btn btn-secondary" id="state-btn" disabled>State</button>
+      </div>
+    </div>
+
+    <!-- Right Section: Quotation Board -->
+    <div class="section">
+      <h5>Bảng báo giá</h5>
+      <div class="quotation-content">
+        <ul>
+          <li>với kiểu dáng thể thao, sang trọng</li>
+          <li>nổi bật, ít tốn nhiên liệu</li>
+          <li>kiểu dáng thể thao</li>
+        </ul>
+        <div class="car-image-display" id="car-image-display">
+          Chọn loại xe để xem hình ảnh
+        </div>
+        <div class="price-display" id="price-display">Giá: </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Requirement 1: When page loads, focus on "Mua vào" field and disable State button
+      $('#mua-vao').focus();
+      $('#state-btn').prop('disabled', true);
+
+      // Requirement 2: When cursor leaves "Mua vào" field, if value is a number and not empty, enable State button
+      $('#mua-vao').on('blur', function() {
+        const value = $(this).val().trim();
+        if (value !== '' && !isNaN(value) && value !== '') {
+          $('#state-btn').prop('disabled', false);
+        } else {
+          $('#state-btn').prop('disabled', true);
+        }
+      });
+
+      // Function to display car image and price
+      function displayCarImage() {
+        const selectElement = document.getElementById('loai-xe');
+        const selectedValue = selectElement.value;
+        
+        // Split the string: format is "image_path;price"
+        const parts = selectedValue.split(';');
+        const imagePath = parts[0];
+        const price = parts[1];
+
+        // Display image
+        const imageDisplay = document.getElementById('car-image-display');
+        imageDisplay.innerHTML = '<img src="' + imagePath + '" style="width:100%;height:100%;object-fit:contain;" alt="Car Image">';
+        
+        // Display price
+        const priceDisplay = document.getElementById('price-display');
+        priceDisplay.textContent = 'Giá: ' + price + ' USD';
+      }
+
+      // Requirement 3: When clicking on car type selection, display image and price on right side (split string)
+      // Use both jQuery and vanilla JS to ensure it works
+      $('#loai-xe').on('change', function() {
+        displayCarImage();
+      });
+      
+      // Also bind with vanilla JS as backup
+      document.getElementById('loai-xe').addEventListener('change', function() {
+        displayCarImage();
+      });
+      
+      // Display image when page loads (for default selected option)
+      displayCarImage();
+
+      // Requirement 4: When clicking Update button, if "Vàng" radio is selected (value 1), update "Vàng" table, else update "USD" table
+      $('#update-btn').on('click', function() {
+        const muaVao = $('#mua-vao').val().trim();
+        const banRa = $('#ban-ra').val().trim();
+        const selectedRadio = $('input[name="cap-nhat-cho"]:checked').val();
+
+        if (!selectedRadio) {
+          alert('Vui lòng chọn "Vàng" hoặc "USD" để cập nhật!');
+          return;
+        }
+
+        if (selectedRadio === '1') {
+          // Update "Vàng" table
+          $('#vang-mua-vao').html(muaVao);
+          $('#vang-ban-ra').html(banRa);
+        } else {
+          // Update "USD" table
+          $('#usd-mua-vao').html(muaVao);
+          $('#usd-ban-ra').html(banRa);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

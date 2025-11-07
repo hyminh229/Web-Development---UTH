@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Bài 3. Thiết kế form nhập liệu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Bài 3. Thiết kế form nhập liệu, dữ liệu nhận được nhập vào bảng</h1>
+
+    <div class="form-wrapper">
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="fullName">Họ tên:</label>
+          <input type="text" id="fullName" name="fullName" />
+          <small class="error" id="fullNameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="className">Lớp:</label>
+          <select id="className" name="className">
+            <option value="Đại học Kỹ thuật phần mềm 9A" selected>Đại học Kỹ thuật phần mềm 9A</option>
+            <option value="Đại học Kỹ thuật phần mềm 9B">Đại học Kỹ thuật phần mềm 9B</option>
+            <option value="Đại học Kỹ thuật phần mềm 9C">Đại học Kỹ thuật phần mềm 9C</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Môn học:</label>
+          <select id="subject" name="subject">
+            <option value="Lập trình hướng đối tượng" selected>Lập trình hướng đối tượng</option>
+            <option value="Cơ sở dữ liệu">Cơ sở dữ liệu</option>
+            <option value="Lập trình Web">Lập trình Web</option>
+            <option value="Mạng máy tính">Mạng máy tính</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Loại:</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="type" value="Lý thuyết" checked />
+              <span>Lý thuyết</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="type" value="Thực hành" />
+              <span>Thực hành</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" id="btnRegister" disabled>Đăng ký</button>
+      </form>
+
+      <div class="table-wrapper">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Họ tên</th>
+              <th>Lớp</th>
+              <th>Môn học đăng ký</th>
+              <th>Loại</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Dữ liệu sẽ được thêm vào đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Đăng ký tài khoản</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>ĐĂNG KÝ TÀI KHOẢN</h1>
+
+    <form id="registerForm" novalidate>
+      <fieldset>
+        <legend>Thông tin đăng nhập</legend>
+
+        <label>Tên đăng nhập: <span class="req">*</span>
+          <input id="txtDN" name="username" type="text" placeholder="txtDN" />
+          <small class="error"></small>
+        </label>
+
+        <label>Mật khẩu: <span class="req">*</span>
+          <input id="txtMK" name="password" type="password" placeholder="txtMK" />
+          <small class="error"></small>
+        </label>
+
+        <label>Nhập lại mật khẩu: <span class="req">*</span>
+          <input id="txtNLMK" name="confirm" type="password" placeholder="txtXNMK" />
+          <small class="error"></small>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend><strong>THÔNG TIN CÁ NHÂN</strong></legend>
+
+        <label>Họ và tên: <span class="req">*</span> <span class="req-text">bắt buộc</span>
+          <input id="txtName" name="fullname" type="text" placeholder="txtName" />
+          <small class="error"></small>
+        </label>
+
+        <label>Ngày sinh: <span class="req">*</span>
+          <input id="txtDOB" name="dob" type="text" placeholder="dd/mm/yyyy" />
+          <small class="error"></small>
+        </label>
+
+        <div class="row">
+          <span>Giới tính:</span>
+          <label class="inline"><input type="radio" name="gender" value="Nam" checked /> Nam</label>
+          <label class="inline"><input type="radio" name="gender" value="Nữ" /> Nữ</label>
+        </div>
+
+        <label>Địa chỉ: <span class="req">*</span>
+          <input id="txtDC" name="address" type="text" placeholder="txtDC" />
+          <small class="error"></small>
+        </label>
+
+        <label>Điện thoại: <span class="req">*</span> <span class="req-text">phải là số</span>
+          <input id="txtDT" name="phone" type="tel" placeholder="txtDT" />
+          <small class="error"></small>
+        </label>
+
+        <label>Email: <span class="req">*</span> <span class="req-text">nhập đúng địa chỉ email</span>
+          <input id="txtEmail" name="email" type="email" placeholder="txtEmail" />
+          <small class="error"></small>
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button id="btnRegister" type="submit">Đăng ký</button>
+        <button type="reset" class="secondary">Hủy</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/validate.js"></script>
+  <script>
+    // Khởi chạy validator cho form “Đăng ký”
+    $(function () {
+      initRegisterValidation("#registerForm");
+    });
+  </script>
+</body>
+</html>

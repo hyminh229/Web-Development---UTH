@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Đăng ký Facebook (bài 1b)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="fb-header">
+    <div class="fb-header-content">
+      <div class="fb-logo">facebook</div>
+      <div class="fb-login-form">
+        <div class="login-row">
+          <div class="login-field">
+            <label>Email hoặc điện thoại</label>
+            <input type="text" />
+          </div>
+          <div class="login-field">
+            <label>Mật khẩu</label>
+            <input type="password" />
+          </div>
+          <button type="button" class="btn-login">Đăng nhập</button>
+        </div>
+        <div class="login-options">
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span>Duy trì đăng nhập</span>
+          </label>
+          <a href="#" class="forgot-password">Quên mật khẩu?</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="fb-main">
+    <div class="fb-content-wrapper">
+      <!-- Left Side - Illustration -->
+      <div class="fb-left">
+        <div class="fb-illustration">
+          <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Archway background -->
+            <rect x="80" y="60" width="120" height="180" fill="#1877f2" rx="8"/>
+            <!-- Archway opening -->
+            <rect x="100" y="80" width="80" height="140" fill="#166fe5" rx="4"/>
+            
+            <!-- Man - inside archway -->
+            <circle cx="140" cy="100" r="12" fill="#fbbf24"/>
+            <rect x="128" y="112" width="24" height="50" fill="#4a5568" rx="3"/>
+            <rect x="128" y="162" width="24" height="30" fill="#2563eb" rx="3"/>
+            
+            <!-- Woman - stepping out -->
+            <circle cx="200" cy="95" r="12" fill="#fbbf24"/>
+            <rect x="188" y="107" width="24" height="45" fill="#ec4899" rx="3"/>
+            <rect x="188" y="152" width="24" height="30" fill="#60a5fa" rx="3"/>
+            
+            <!-- Connecting hands -->
+            <line x1="152" y1="135" x2="188" y2="125" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+            
+            <!-- Decorative elements -->
+            <circle cx="120" cy="50" r="3" fill="#60a5fa" opacity="0.6"/>
+            <circle cx="240" cy="70" r="3" fill="#60a5fa" opacity="0.6"/>
+            <circle cx="100" cy="250" r="4" fill="#42b72a" opacity="0.5"/>
+            <circle cx="260" cy="240" r="4" fill="#42b72a" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="fb-message">
+          <div class="message-line">Cảm ơn bạn</div>
+          <div class="message-line">đã ghé thăm!</div>
+        </div>
+      </div>
+
+      <!-- Right Side - Registration Form -->
+      <div class="fb-right">
+        <h1 class="fb-register-title">Đăng ký</h1>
+        <p class="fb-register-subtitle">Miễn phí và sẽ luôn như vậy.</p>
+
+        <form id="fbForm" novalidate>
+          <div class="fb-form-row">
+            <label class="fb-label">
+              Họ <span class="req">*</span>
+              <input id="fbLast" type="text" class="fb-input" />
+              <small class="error"></small>
+            </label>
+            <label class="fb-label">
+              Tên <span class="req">*</span>
+              <input id="fbFirst" type="text" class="fb-input" />
+              <small class="error"></small>
+            </label>
+          </div>
+
+          <label class="fb-label">
+            Email đăng nhập <span class="req">*</span>
+            <input id="fbEmail" type="email" class="fb-input" />
+            <small class="error"></small>
+          </label>
+
+          <label class="fb-label">
+            Nhập lại Email. <span class="req">*</span>
+            <input id="fbEmail2" type="email" class="fb-input" />
+            <small class="error"></small>
+          </label>
+
+          <label class="fb-label">
+            Mật khẩu <span class="req">*</span>
+            <input id="fbPwd" type="password" class="fb-input" />
+            <small class="error"></small>
+          </label>
+
+          <label class="fb-label">
+            Năm sinh <span class="req">*</span>
+            <input id="fbYear" type="number" min="1900" max="2100" class="fb-input" />
+            <small class="error"></small>
+          </label>
+
+          <button type="submit" id="btnFB" class="fb-submit-btn">Đăng ký</button>
+        </form>
+
+        <p class="fb-bottom-message">Chúng tôi mong sớm gặp lại bạn.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/validate.js"></script>
+  <script>
+    $(function () {
+      initFacebookValidation("#fbForm");
+    });
+  </script>
+</body>
+</html>
